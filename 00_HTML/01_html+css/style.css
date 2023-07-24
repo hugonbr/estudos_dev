@@ -1,0 +1,18 @@
+.app {
+    text-align: center;
+    font-size: 7rem;
+    /* border: solid 0.1rem red; */
+    padding: 4rem;
+    margin: 4rem;
+}
+
+p {
+    color: orangered;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 5rem;
+    /* border: solid 0.1rem orangered; */
+}
+
