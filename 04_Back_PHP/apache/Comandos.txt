@@ -1,0 +1,10 @@
+# We can view status using the following command:
+sudo systemctl status apache2.service
+
+## Start command ##
+sudo systemctl start apache2.service
+## Stop command ##
+sudo systemctl stop apache2.service
+## Restart command ##
+sudo systemctl restart apache2.service
+
