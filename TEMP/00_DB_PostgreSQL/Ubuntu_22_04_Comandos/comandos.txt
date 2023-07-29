@@ -1,0 +1,31 @@
+# Instalação
+https://www.digitalocean.com/community/tutorials/how-to-install-postgresql-on-ubuntu-22-04-quickstart
+
+# Conexão
+
+# login
+sudo -i -u postgres
+psql
+ou
+sudo -u postgres psql
+# exit
+\q
+
+hugo-nathan@Lenovo-Y720-15IKB:~$ sudo -i -u postgres
+postgres@Lenovo-Y720-15IKB:~$ createuser --interactive
+Enter name of role to add: admin
+Shall the new role be a superuser? (y/n) y
+postgres@Lenovo-Y720-15IKB:~$ createdb admin
+postgres@Lenovo-Y720-15IKB:~$ 
+
+####
+
+hugo-nathan@Lenovo-Y720-15IKB:~$ sudo -u admin psql
+could not change directory to "/home/hugo-nathan": Permissão negada
+psql (14.8 (Ubuntu 14.8-0ubuntu0.22.04.1))
+Type "help" for help.
+
+admin=# \conninfo
+You are connected to database "admin" as user "admin" via socket in "/var/run/postgresql" at port "5432".
+admin=#
+

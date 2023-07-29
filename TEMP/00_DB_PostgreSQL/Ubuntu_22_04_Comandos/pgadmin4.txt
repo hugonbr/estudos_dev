@@ -1,0 +1,15 @@
+# Tutorial
+
+https://itslinuxfoss.com/install-pgadmin-ubuntu-22-04/
+
+Complicado (para server)
+https://www.digitalocean.com/community/tutorials/how-to-install-and-configure-pgadmin-4-in-server-mode-on-ubuntu-22-04
+
+Just for reference: I ran into the same issue on ubuntu-20.04 running postgresql-13.1. To solve it with this configuration I had to run the following commands in the terminal:
+
+sudo su postgres
+psql
+\password postgres
+enter your password twice
+Afterwards, I could log in through pgAdmin4 as usual, providing the set password.
+
