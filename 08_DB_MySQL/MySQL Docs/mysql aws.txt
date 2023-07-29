@@ -1,0 +1,20 @@
+MySQL AWS
+
+mysql -h localhost -u root -p
+
+--------------------
+
+-- Relatório da AWS --
+
+select max(hits) from links;
+
+select url from links where hits=(select max(hits) from links);
+select url, hits from links where hits=(select max(hits) from links);
+
+select url, hits from links order by hits desc limit 10;
+
+DELETE FROM links WHERE id=12 OR ir=14;
+delete from links where id>21 and id<29;
+
+----------------------
+
