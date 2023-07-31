@@ -6,11 +6,13 @@
 
     https://www.w3schools.com/php/default.asp
 
-    http://br.phptherightway.com/#guia_de_estilo_de_codigo
+    http://br.phptherightway.com/#destaques_da_linguagem
 
 # PHP OOP
 
     https://www.w3schools.com/php/php_oop_what_is.asp
+
+    https://www.php.net/language.oop5
 
 # Python
 
