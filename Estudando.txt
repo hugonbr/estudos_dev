@@ -1,6 +1,6 @@
 # HTML
 
-    https://www.w3schools.com/html/html_headings.asp
+    https://www.w3schools.com/html/html_images.asp
 
 # PHP
 
