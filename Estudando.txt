@@ -4,11 +4,13 @@
 
 # PHP
 
-    php
+    https://www.w3schools.com/php/default.asp
+
+    http://br.phptherightway.com/
 
 # PHP OOP
 
-    oop
+    https://www.w3schools.com/php/php_oop_what_is.asp
 
 # Python
 
