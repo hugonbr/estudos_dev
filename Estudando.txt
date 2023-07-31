@@ -6,7 +6,7 @@
 
     https://www.w3schools.com/php/default.asp
 
-    http://br.phptherightway.com/
+    http://br.phptherightway.com/#guia_de_estilo_de_codigo
 
 # PHP OOP
 
