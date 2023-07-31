@@ -6,7 +6,7 @@
 
     https://www.w3schools.com/php/default.asp
 
-    http://br.phptherightway.com/#destaques_da_linguagem
+    http://br.phptherightway.com/#standard_php_library
 
 # PHP OOP
 
