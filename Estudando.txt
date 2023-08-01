@@ -2,11 +2,14 @@
 
     https://www.w3schools.com/html/html_images.asp
 
-# PHP
+# PHP (cursos: Dankicode, Udemy)
 
     https://www.w3schools.com/php/default.asp
 
     http://br.phptherightway.com/#standard_php_library
+
+    PHP Full Course for non-haters 🐘 (2023)
+    https://youtu.be/zZ6vybT1HQs
 
 # PHP OOP
 
