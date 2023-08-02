@@ -40,8 +40,13 @@
         if (!empty($_POST["username"]) || !empty($_POST["password"])) {
             echo "username: " . $_POST["username"] . "<br>";
             echo "password: " . $_POST["password"] . "<br>";
+            if ($_POST["username"] === "admin" && $_POST["password"] === "1234") {
+                echo '<p style="color: green">bem-vindo admin</p>';
+            } else {
+                echo '<p style="color: red">usuário ou senha incorretos</p>';
+            }
         } else {
-            echo "Dados inválidos, tente novamente";
+            echo '<p style="color: red">Dados inválidos, tente novamente</p>';
         }
     }
     ?>
