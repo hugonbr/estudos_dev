@@ -1,0 +1,6 @@
+local do arquivo /etc/php/8.1/cli
+
+O arquivo php.ini contém as configurações do php em
+execução, dentre elas, a opção de exibir ou ocultar o
+erro do php no navegador.
+

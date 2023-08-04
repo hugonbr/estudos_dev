@@ -18,9 +18,11 @@ require_once 'db_config.php';
 
     // Banco de Dados
     
-    var_dump($_REQUEST);
-    var_dump($_SERVER["REQUEST_METHOD"]);
-
+    // echo $_POST["login"] . "<br>";
+    
+    // var_dump($_REQUEST);
+    // var_dump($_SERVER["REQUEST_METHOD"]);
+    
     if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) && !empty($_POST["senha"])) {
         $login = $_POST["login"];
         $senha = $_POST["senha"];

@@ -10,9 +10,9 @@
 
 <body>
 
-    <form action="main.php?id=1" method="POST">
-        <input type="text" name="login" placeholder="login"><br>
-        <input type="password" name="senha" placeholder="senha"><br>
+    <form action="main.php" method="POST">
+        <input type="text" name="login2" placeholder="login" required><br>
+        <input type="password" name="senha" placeholder="senha" required><br>
         <input type="submit" value="Entrar">
     </form>
 
