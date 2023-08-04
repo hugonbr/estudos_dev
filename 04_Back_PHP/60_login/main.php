@@ -23,6 +23,8 @@ require_once 'db_config.php';
     // var_dump($_REQUEST);
     // var_dump($_SERVER["REQUEST_METHOD"]);
     
+    var_dump($_POST);
+
     if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) && !empty($_POST["senha"])) {
         $login = $_POST["login"];
         $senha = $_POST["senha"];

@@ -11,7 +11,7 @@
 <body>
 
     <form action="main.php" method="POST">
-        <input type="text" name="login2" placeholder="login" required><br>
+        <input type="text" name="login" placeholder="login" required><br>
         <input type="password" name="senha" placeholder="senha" required><br>
         <input type="submit" value="Entrar">
     </form>
