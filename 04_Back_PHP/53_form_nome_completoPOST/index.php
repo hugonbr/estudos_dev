@@ -18,18 +18,19 @@
 
 <body>
     <form action="" method="POST">
-        <label for="fname">Nome: </label>
-        <input type="text" name="fname" id="fname"><br>
-        <label for="lname">Sobrenome: </label>
-        <input type="text" name="lname" id="lname"><br>
+        <input type="text" name="fname" placeholder="fname"><br>
+        <input type="text" name="lname" placeholder="lname"><br>
         <input type="submit" value="submit">
     </form>
 </body>
 
 <?php
-echo "Nome completo: ";
-echo "$_POST[fname]" . " ";
-echo "$_POST[lname]<br>";
+if (isset($_POST["fname"]) && isset($_POST["lname"])) {
+
+    echo "Nome completo: ";
+    echo "$_POST[fname]" . " ";
+    echo "$_POST[lname]<br>";
+}
 ?>
 
 </html>
