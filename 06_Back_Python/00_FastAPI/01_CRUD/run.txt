@@ -1,0 +1,23 @@
+uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+
+Create a task:
+
+    curl -X POST -H "Content-Type: application/json" -d '{"title": "Buy groceries", "description": "Milk, eggs, bread"}' http://localhost:8000/tasks/
+
+Retrieve all tasks:
+
+    curl http://localhost:8000/tasks/
+
+Retrieve a specific task (replace {task_index} with the task's index):
+
+    curl http://localhost:8000/tasks/{task_index}
+
+Update a task (replace {task_index} with the task's index):
+
+    curl -X PUT -H "Content-Type: application/json" -d '{"title": "Buy groceries", "description": "Milk, eggs, bread", "done": true}' http://localhost:8000/tasks/{task_index}
+
+Delete a task (replace {task_index} with the task's index):
+
+    curl -X DELETE http://localhost:8000/tasks/{task_index}
+
