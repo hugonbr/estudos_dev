@@ -1,4 +1,12 @@
 <?php
+// Start the session
+session_start();
+if (!isset($_SESSION["user"])) {
+    header("Location: loginform.php");
+    die();
+}
+?>
+<?php
 require('template/header.php');
 ?>
 <div class="d-flex justify-content-between">

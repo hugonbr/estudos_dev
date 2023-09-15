@@ -1,8 +1,3 @@
-<?php
-session_start();
-session_destroy();
-?>
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -35,15 +30,18 @@ session_destroy();
                                 <div class="card-body">
                                     <form action="login.php" method="POST">
                                         <div class="form-floating mb-3">
-                                            <input id="login" class="form-control" id="inputEmail" name="login" type="text" placeholder="name@example.com" required />
+                                            <input id="login" class="form-control" id="inputEmail" name="login"
+                                                type="text" placeholder="name@example.com" required />
                                             <label for="inputEmail">Usuário</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input id="senha" class="form-control" id="inputPassword" name="senha" type="text" placeholder="Password" required />
+                                            <input id="senha" class="form-control" id="inputPassword" name="senha"
+                                                type="text" placeholder="Password" required />
                                             <label for="inputPassword">Senha</label>
                                         </div>
                                         <div class="form-check mb-3">
-                                            <input id="show" class="form-check-input" type="checkbox" onclick="mostrar()" value="" />
+                                            <input id="show" class="form-check-input" type="checkbox"
+                                                onclick="mostrar()" value="" />
                                             <label class="form-check-label pass-disable-text" for="show">Mostrar
                                                 Senha</label>
                                         </div>

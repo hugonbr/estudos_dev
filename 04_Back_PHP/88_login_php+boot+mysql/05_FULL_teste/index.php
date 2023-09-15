@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 if (!isset($_SESSION["user"])) {
-    header("Location: loginform.php");
+    header("Location: login/loginform.php");
     die();
 }
 ?>
@@ -16,7 +16,7 @@ require('template/header.php');
                 <h4>Produtos</h4>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="produtos.php">Ver Detalhes</a>
+                <a class="small text-white stretched-link" href="cruds/produto/listar_produtos.php">Ver Detalhes</a>
                 <div class="small text-white">
                     <i class="fas fa-angle-right"></i>
                 </div>
@@ -30,7 +30,8 @@ require('template/header.php');
                 <h4>Funcionários</h4>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="funcionarios.php">Ver Detalhes</a>
+                <a class="small text-white stretched-link" href="cruds/funcionario/listar_funcionarios.php">Ver
+                    Detalhes</a>
                 <div class="small text-white">
                     <i class="fas fa-angle-right"></i>
                 </div>
