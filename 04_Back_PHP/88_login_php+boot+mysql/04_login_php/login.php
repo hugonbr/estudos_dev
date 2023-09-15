@@ -61,7 +61,6 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
             <main>
                 <div class="container">
                     <div class="row justify-content-center">
-                        <p id="aviso" class="text-center"></p>
                         <div class="col-lg-5 teste">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
