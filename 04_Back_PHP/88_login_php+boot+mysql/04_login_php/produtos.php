@@ -35,16 +35,17 @@ require('template/header.php');
             <?php
             require_once('database/db_config.php');
             $stmt = $pdo->query('SELECT * FROM produto');
-            $produtos = $stmt->fetchAll(PDO::FETCH_ASSOC);
+            // mudar para PDO::FETCH_OBJ
+            $produtos = $stmt->fetchAll(PDO::FETCH_OBJ);
 
             if ($produtos) {
                 foreach ($produtos as $produto) {
                     // echo $produto['id'] . '|' . $produto['nome'] . '|' . $produto['quantidade'] . '|' . $produto['preco'] . '<br>';
                     echo '<tr>';
-                    echo "<td>{$produto['id']}</td>";
-                    echo "<td>{$produto['nome']}</td>";
-                    echo "<td>{$produto['quantidade']}</td>";
-                    echo "<td>{$produto['preco']}</td>";
+                    echo "<td>{$produto->id}</td>";
+                    echo "<td>{$produto->nome}</td>";
+                    echo "<td>{$produto->quantidade}</td>";
+                    echo "<td>{$produto->preco}</td>";
                     echo '<td>
                             <button type="button" class="btn btn-warning">
                                 Editar
