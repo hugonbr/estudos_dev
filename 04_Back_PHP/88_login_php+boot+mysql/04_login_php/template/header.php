@@ -27,8 +27,7 @@
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li>
                         <a class="dropdown-item" href="#">Configurações</a>
@@ -60,8 +59,7 @@
                         </a>
                         <div class="sb-sidenav-menu-heading">Listagem</div>
 
-                        <a class="nav-link collapsed" href="produtos.php" aria-expanded="false"
-                            aria-controls="collapseLayouts">
+                        <a class="nav-link collapsed" href="produtos.php" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-cube"></i>
                             </div>
@@ -69,8 +67,7 @@
                             <div class="sb-sidenav-collapse-arrow"></div>
                         </a>
 
-                        <a class="nav-link collapsed" href="funcionarios.php" aria-expanded="false"
-                            aria-controls="collapsePages">
+                        <a class="nav-link collapsed" href="funcionarios.php" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -83,7 +80,9 @@
                 </div>
                 <div class="sb-sidenav-footer">
                     <div class="small">Usuário:</div>
-                    Admin
+                    <?php
+                    echo $_SESSION["user"];
+                    ?>
                 </div>
             </nav>
         </div>
