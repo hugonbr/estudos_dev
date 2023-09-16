@@ -2,7 +2,7 @@
 // Start the session
 session_start();
 //teste admin
-require('database/db_config.php');
+require('../database/db_config.php');
 
 if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) && !empty($_POST["senha"])) {
     $usuario = $_POST["login"];
@@ -25,7 +25,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
         // Login bem-sucedido
         // echo "<p style='color:green;'>Login bem-sucedido! Bem-vindo, " . $usuario . "</p>";
         $_SESSION["user"] = $usuario;
-        header("Location: index.php");
+        header("Location: /index.php");
         exit;
     } else {
         // Login falhou
