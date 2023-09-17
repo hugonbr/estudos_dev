@@ -8,12 +8,22 @@ if (!isset($_SESSION["user"])) {
 ?>
 <?php
 require('template/header.php');
+require('database/db_config.php');
+
+$sql = "SELECT COUNT(id) FROM produto";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+
+$contprod = $stmt->fetchColumn();
+
 ?>
 <div class="row">
     <div class="col-xl-6 col-md-6">
         <div class="card bg-primary text-white mb-4">
             <div class="card-body">
-                <h4>Produtos</h4>
+                <h4>Produtos: <?php echo $contprod ?></h4>
             </div>
             <div class="card-footer d-flex align-items-center justify-content-between">
                 <a class="small text-white stretched-link" href="cruds/produto/listar_produtos.php">Ver Detalhes</a>
