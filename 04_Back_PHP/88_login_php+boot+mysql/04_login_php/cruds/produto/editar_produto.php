@@ -17,7 +17,50 @@ require('template/header.php');
         <div class="mt-2 mb-4">
             <h2>Editar Produto</h2>
         </div>
-        <form action="" method="GET">
+        <?php
+        if (isset($_POST['id'], $_POST['nome'], $_POST['quantidade'], $_POST['preco'])) {
+        ?>
+        <form action="" method="POST">
+            <div class="form-floating mb-3">
+                <input class="form-control" id="inputNome" type="text" placeholder="Nome" name="nome" required
+                    value="<?php echo "{$_POST['nome']}" ?>">
+                <label for="inputNome">Nome</label>
+            </div>
+            <div class="col-md-12">
+                <div class="form-floating mb-3">
+                    <input class="form-control" id="inputPreco" type="number" step=".01" placeholder="Preço" name="id"
+                        required value="<?php echo "{$_POST['id']}" ?>" readonly>
+                    <label for="inputPreco">ID</label>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input class="form-control" id="inputQuantidade" type="number" placeholder="Quantidade"
+                            name="quantidade" required value="<?php echo "{$_POST['quantidade']}" ?>">
+                        <label for="inputQuantidade">Quantidade</label>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-floating mb-3 mb-md-0">
+                        <input class="form-control" id="inputPreco" type="number" step=".01" placeholder="Preço"
+                            name="preco" required value="<?php echo "{$_POST['preco']}" ?>">
+                        <label for="inputPreco">Preço</label>
+                    </div>
+                </div>
+
+            </div>
+            <div class="mt-2 mb-4">
+                <!-- <button class="btn btn-primary" type="submit"> <a href="../index.html">Create
+                                            Account</a></button> -->
+                <button class="btn btn-primary" type="submit"> Salvar </button>
+                <a class="btn btn-success" href="listar_produtos.php"> Voltar </a>
+            </div>
+        </form>
+        <?php
+        } else {
+        ?>
+        <form action="" method="POST">
             <div class="form-floating mb-3">
                 <input class="form-control" id="inputNome" type="text" placeholder="Nome" name="nome" required
                     value="<?php echo "{$_GET['nome']}" ?>">
@@ -51,20 +94,23 @@ require('template/header.php');
                 <!-- <button class="btn btn-primary" type="submit"> <a href="../index.html">Create
                                             Account</a></button> -->
                 <button class="btn btn-primary" type="submit"> Salvar </button>
-                <a class="btn btn-danger" href="listar_produtos.php"> Cancelar </a>
+                <a class="btn btn-success" href="listar_produtos.php"> Voltar </a>
             </div>
         </form>
+        <?php
+        }
+        ?>
     </div>
 </div>
 <?php
-if (isset($_GET['nome'], $_GET['quantidade'], $_GET['preco'])) {
+if (isset($_POST['id'], $_POST['nome'], $_POST['quantidade'], $_POST['preco'])) {
     //var_dump($_GET);
     echo '<br>';
     //var_dump($_POST);
-    $id = $_GET['id'];
-    $nome = $_GET['nome'];
-    $quantidade = $_GET['quantidade'];
-    $preco = $_GET['preco'];
+    $id = $_POST['id'];
+    $nome = $_POST['nome'];
+    $quantidade = $_POST['quantidade'];
+    $preco = $_POST['preco'];
 
     require('../../database/db_config.php');
 
@@ -82,9 +128,9 @@ if (isset($_GET['nome'], $_GET['quantidade'], $_GET['preco'])) {
 
         // echo a message to say the UPDATE succeeded
         // echo "UPDATED successfully";
-        // echo '<div class="text-center">';
-        // echo '<span class="alert alert-success text-center mb-3">Os dados foram atualizados!</span>';
-        // echo '</div>';
+        echo '<div class="text-center">';
+        echo '<span class="alert alert-success text-center mb-3">Os dados foram atualizados!</span>';
+        echo '</div>';
     } catch (PDOException $e) {
         echo $sql . "<br>" . $e->getMessage();
     }
