@@ -27,6 +27,9 @@ $stmt->execute();
 
 $contprod = $stmt->fetchColumn();
 ?>
+<?php
+$possuiProdutos = false;
+?>
 <div class="d-flex justify-content-between">
     <!-- <a href="listar_produtos.php" style="text-decoration: none"> -->
     <h2>Produtos: <?php echo $contprod ?></h2>
@@ -57,13 +60,14 @@ $contprod = $stmt->fetchColumn();
             $produtos = $stmt->fetchAll(PDO::FETCH_OBJ);
 
             if ($produtos) {
+                $possuiProdutos = true;
                 foreach ($produtos as $produto) {
                     // echo $produto['id'] . '|' . $produto['nome'] . '|' . $produto['quantidade'] . '|' . $produto['preco'] . '<br>';
                     echo '<tr>';
-                    echo "<td>{$produto->id}</td>";
-                    echo "<td>{$produto->nome}</td>";
-                    echo "<td>{$produto->quantidade}</td>";
-                    echo "<td>{$produto->preco}</td>";
+                    echo "<td>$produto->id</td>";
+                    echo "<td>$produto->nome</td>";
+                    echo "<td>$produto->quantidade</td>";
+                    echo "<td>R$ $produto->preco</td>";
                     echo '<td>
                             <a href="editar_produto.php?id=' . $produto->id . '&nome=' . $produto->nome . '&quantidade=' . $produto->quantidade . '&preco=' . $produto->preco . '" class="btn btn-warning">
                                 Editar
@@ -79,6 +83,14 @@ $contprod = $stmt->fetchColumn();
         </tbody>
     </table>
 </div>
+<?php
+if (!$possuiProdutos) {
+    echo '<div class="text-center m-4">';
+    echo '<h3 class="alert alert-danger text-center mb-3">Nenhum Produto cadastrado no sistema!</h3>';
+    echo '</div>';
+}
+?>
+
 <!-- </div> -->
 <!-- </div> -->
 </div>
