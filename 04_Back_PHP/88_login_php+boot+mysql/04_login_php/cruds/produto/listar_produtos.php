@@ -2,12 +2,13 @@
 // Start the session
 session_start();
 if (!isset($_SESSION["user"])) {
-    header("Location: login/loginform.php");
+    header("Location: ../../index.php");
     die();
 }
 ?>
 <?php
 require('template/header.php');
+// require('../../template/header.php');
 ?>
 <div class="d-flex justify-content-between">
     <h2>Produtos</h2>
@@ -33,7 +34,8 @@ require('template/header.php');
             <!-- teste PHP BD -->
 
             <?php
-            require_once('database/db_config.php');
+            //require_once('database/db_config.php');
+            require_once('../../database/db_config.php');
             $stmt = $pdo->query('SELECT * FROM produto');
             // mudar para PDO::FETCH_OBJ
             $produtos = $stmt->fetchAll(PDO::FETCH_OBJ);

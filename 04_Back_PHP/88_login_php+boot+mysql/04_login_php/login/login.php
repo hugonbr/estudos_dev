@@ -18,7 +18,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
     $stmt->bindParam(':senha', $senha);
     $stmt->execute();
 
-    // echo "teste<br>";
+    //echo "<br>";
 
     // Verifica se encontrou um regisstro correspondente
     if ($stmt->rowCount() == 1) {
@@ -71,15 +71,18 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
                                 <div class="card-body">
                                     <form action="login.php" method="POST">
                                         <div class="form-floating mb-3">
-                                            <input id="login" class="form-control" id="inputEmail" name="login" type="text" placeholder="name@example.com" required />
+                                            <input id="login" class="form-control" id="inputEmail" name="login"
+                                                type="text" value="hugonbr" placeholder="name@example.com" required />
                                             <label for="inputEmail">Usuário</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input id="senha" class="form-control" id="inputPassword" name="senha" type="text" placeholder="Password" required />
+                                            <input id="senha" class="form-control" id="inputPassword" name="senha"
+                                                type="text" value="000" placeholder="Password" required />
                                             <label for="inputPassword">Senha</label>
                                         </div>
                                         <div class="form-check mb-3">
-                                            <input id="show" class="form-check-input" type="checkbox" onclick="mostrar()" value="" />
+                                            <input id="show" class="form-check-input" type="checkbox"
+                                                onclick="mostrar()" value="" />
                                             <label class="form-check-label pass-disable-text" for="show">Mostrar
                                                 Senha</label>
                                         </div>

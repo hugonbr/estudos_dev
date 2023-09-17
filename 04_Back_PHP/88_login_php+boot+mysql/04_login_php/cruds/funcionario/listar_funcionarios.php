@@ -2,12 +2,13 @@
 // Start the session
 session_start();
 if (!isset($_SESSION["user"])) {
-    header("Location: login/loginform.php");
+    header("Location: ../../index.php");
     die();
 }
 ?>
 <?php
 require('template/header.php');
+// require('../../template/header.php');
 ?>
 <div class="d-flex justify-content-between">
     <h2>Funcionários</h2>
