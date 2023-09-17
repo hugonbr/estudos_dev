@@ -7,6 +7,7 @@ if (!isset($_SESSION["user"])) {
 }
 ?>
 <?php
+require_once('../../database/db_config.php');
 require('template/header.php');
 // require('../../template/header.php');
 ?>
@@ -17,9 +18,18 @@ if (isset($_GET['id'])) {
     echo '</div>';
 }
 ?>
+<?php
+$sql = "SELECT COUNT(id) FROM produto";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->execute();
+
+$contprod = $stmt->fetchColumn();
+?>
 <div class="d-flex justify-content-between">
     <!-- <a href="listar_produtos.php" style="text-decoration: none"> -->
-    <h2>Produtos</h2>
+    <h2>Produtos: <?php echo $contprod ?></h2>
     <!-- </a> -->
     <a href="cadastrar_produto.php" class="btn btn-lg btn-success">Cadastrar</a>
 </div>
@@ -42,7 +52,6 @@ if (isset($_GET['id'])) {
 
             <?php
             //require_once('database/db_config.php');
-            require_once('../../database/db_config.php');
             $stmt = $pdo->query('SELECT * FROM produto');
             // mudar para PDO::FETCH_OBJ
             $produtos = $stmt->fetchAll(PDO::FETCH_OBJ);
