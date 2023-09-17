@@ -49,12 +49,12 @@ require('template/header.php');
                     echo "<td>{$produto->quantidade}</td>";
                     echo "<td>{$produto->preco}</td>";
                     echo '<td>
-                            <button type="button" class="btn btn-warning">
+                            <a href="editar_produto.php?id=' . $produto->id . '&nome=' . $produto->nome . '&quantidade=' . $produto->quantidade . '&preco=' . $produto->preco . '" class="btn btn-warning">
                                 Editar
-                            </button>
-                            <button type="button" class="btn btn-danger">
-                                Remover
-                            </button>
+                            </a>
+                            <a href="deletar_produto.php?id=' . $produto->id . '" class="btn btn-danger">
+                                Deletar
+                            </a>
                           </td>';
                     echo '</tr>';
                 }
