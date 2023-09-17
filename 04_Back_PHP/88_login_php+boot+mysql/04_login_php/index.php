@@ -42,9 +42,9 @@ require('template/header.php');
 </div>
 <!-- teste user:admin -->
 <?php
-echo '<h2 class = "text-center">';
-echo 'Usuário da sessão: ' . $_SESSION["user"];
-echo '</h2>';
+// echo '<h2 class = "text-center">';
+// echo 'Usuário da sessão: ' . $_SESSION["user"];
+// echo '</h2>';
 ?>
 </main>
 <?php
