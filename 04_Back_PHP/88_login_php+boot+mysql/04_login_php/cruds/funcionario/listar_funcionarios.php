@@ -12,13 +12,19 @@ require('template/header.php');
 ?>
 <div class="d-flex justify-content-between">
     <h2>Funcionários</h2>
-    <button type="button" class="btn btn-success">
+    <!-- <button type="button" class="btn btn-success">
         Insert
-    </button>
+    </button> -->
+
 </div>
+<?php
+echo '<div class="text-center m-4">';
+echo '<h2 class="alert alert-warning text-center mb-3">PÁGINA EM CONSTRUÇÃO!</h2>';
+echo '</div>';
+?>
 <!-- <div class="row justify-content-center"> -->
 <!-- <div class="col-auto"> -->
-<div class="table-responsive mt-2">
+<!-- <div class="table-responsive mt-2">
     <table class="table table-striped table-bordered text-center">
         <thead>
             <tr>
@@ -68,45 +74,6 @@ require('template/header.php');
                     </button>
                 </td>
             </tr>
-            <!-- <tr>
-                <td>John</td>
-                <td>Doe</td>
-                <td>john@example.com</td>
-                <td>
-                    <button type="button" class="btn btn-warning">
-                        Edit
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                        Delete
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>Mary</td>
-                <td>Moe</td>
-                <td>mary@example.com</td>
-                <td>
-                    <button type="button" class="btn btn-warning">
-                        Edit
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                        Delete
-                    </button>
-                </td>
-            </tr>
-            <tr>
-                <td>July</td>
-                <td>Dooley</td>
-                <td>july@example.com</td>
-                <td>
-                    <button type="button" class="btn btn-warning">
-                        Edit
-                    </button>
-                    <button type="button" class="btn btn-danger">
-                        Delete
-                    </button>
-                </td>
-            </tr>
             <tr>
                 <td>John</td>
                 <td>Doe</td>
@@ -1315,10 +1282,49 @@ require('template/header.php');
                         Delete
                     </button>
                 </td>
-            </tr> -->
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>john@example.com</td>
+                <td>
+                    <button type="button" class="btn btn-warning">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>Moe</td>
+                <td>mary@example.com</td>
+                <td>
+                    <button type="button" class="btn btn-warning">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+            <tr>
+                <td>July</td>
+                <td>Dooley</td>
+                <td>july@example.com</td>
+                <td>
+                    <button type="button" class="btn btn-warning">
+                        Edit
+                    </button>
+                    <button type="button" class="btn btn-danger">
+                        Delete
+                    </button>
+                </td>
+            </tr>
         </tbody>
     </table>
-</div>
+</div> -->
 <!-- </div> -->
 <!-- </div> -->
 </div>

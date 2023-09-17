@@ -21,7 +21,7 @@ if (isset($_GET['id'])) {
     <!-- <a href="listar_produtos.php" style="text-decoration: none"> -->
     <h2>Produtos</h2>
     <!-- </a> -->
-    <a href="cadastrar_produto.php" class="btn btn-success text-white">Cadastrar</a>
+    <a href="cadastrar_produto.php" class="btn btn-lg btn-success">Cadastrar</a>
 </div>
 <!-- <div class="row justify-content-center"> -->
 <!-- <div class="col-auto"> -->

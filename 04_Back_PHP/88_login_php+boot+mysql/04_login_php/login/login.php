@@ -77,7 +77,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
                                         </div>
                                         <div class="form-floating mb-3">
                                             <input id="senha" class="form-control" id="inputPassword" name="senha"
-                                                type="text" value="000" placeholder="Password" required />
+                                                type="password" value="000" placeholder="Password" required />
                                             <label for="inputPassword">Senha</label>
                                         </div>
                                         <div class="form-check mb-3">
@@ -87,7 +87,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
                                                 Senha</label>
                                         </div>
                                         <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="password.html">Esqueci a minha senha</a>
+                                            <a class="small" href="#">Esqueci a minha senha</a>
                                             <button type="submit" class="btn btn-primary">
                                                 Entrar
                                             </button>
@@ -97,7 +97,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
                                 </div>
                                 <div class="card-footer text-center">
                                     <div>
-                                        <a href="register.html">Cadastrar uma conta</a>
+                                        <a href="#">Cadastrar uma conta</a>
                                     </div>
                                 </div>
                             </div>
