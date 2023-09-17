@@ -10,8 +10,17 @@ if (!isset($_SESSION["user"])) {
 require('template/header.php');
 // require('../../template/header.php');
 ?>
+<?php
+if (isset($_GET['id'])) {
+    echo '<div class="text-center">';
+    echo '<span class="alert alert-success text-center mb-3">Os dados foram atualizados! <a href="listar_produtos.php" style="text-decoration: none">[X]</a> </span>';
+    echo '</div>';
+}
+?>
 <div class="d-flex justify-content-between">
-    <h2>Produtos</h2>
+    <a href="listar_produtos.php" style="text-decoration: none">
+        <h2>Produtos</h2>
+    </a>
     <button type="button" class="btn btn-success">
         Cadastrar
     </button>
