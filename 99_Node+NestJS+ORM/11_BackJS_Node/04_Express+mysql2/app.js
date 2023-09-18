@@ -32,14 +32,21 @@ app.get("/products", (req, res) => {
         }
 
         // Transforma o resultado em um objeto JSON
-        const jsonResponse = {
-            products: results,
-        };
+        const jsonResponse = results.map((result) => ({
+            id: result.id,
+            name: result.nome, // Substitua 'nome' pelo nome da coluna que armazena os nomes dos produtos no seu banco de dados
+            quantidade: result.quantidade, // Substitua 'nome' pelo nome da coluna que armazena os nomes dos produtos no seu banco de dados
+            price: result.preco, // Substitua 'preco' pelo nome da coluna que armazena os preços dos produtos no seu banco de dados
+        }));
 
-        res.json(jsonResponse);
+        res.json({ products: jsonResponse });
     });
 });
 
+// Adicione uma rota para servir o aplicativo React
+app.use(express.static("react-app/build")); // Substitua "react-app/build" pelo diretório do seu aplicativo React
+
+// Inicie o servidor
 app.listen(port, () => {
     console.log(`Servidor Express rodando em http://localhost:${port}`);
 });
