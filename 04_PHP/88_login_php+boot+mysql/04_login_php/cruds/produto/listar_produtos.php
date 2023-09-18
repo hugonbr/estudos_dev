@@ -72,7 +72,7 @@ $possuiProdutos = false;
                             <a href="editar_produto.php?id=' . $produto->id . '&nome=' . $produto->nome . '&quantidade=' . $produto->quantidade . '&preco=' . $produto->preco . '" class="btn btn-warning">
                                 Editar
                             </a>
-                            <a href="deletar_produto.php?id=' . $produto->id . '" class="btn btn-danger">
+                            <a href="javascript:void(0);" onclick="confirmDelete(' . $produto->id . ');" class="btn btn-danger">
                                 Deletar
                             </a>
                           </td>';
@@ -95,6 +95,18 @@ if (!$possuiProdutos) {
 <!-- </div> -->
 </div>
 </main>
+
+<script>
+function confirmDelete(productId) {
+    var confirmDelete = confirm("Tem certeza de que deseja remover este produto?");
+
+    if (confirmDelete) {
+        // Se o usuário confirmar, redirecione para a página de exclusão
+        window.location.href = "deletar_produto.php?id=" + productId;
+    }
+    // Se o usuário cancelar, nada acontece
+}
+</script>
 <?php
 require('template/footer.php');
 ?>
