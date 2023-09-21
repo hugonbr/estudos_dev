@@ -22,6 +22,12 @@ db.connect((err) => {
     }
 });
 
+app.get("/", (req, res) => {
+    const html =
+        '<html><head><title>Olá Mundo</title></head><body><h1>Olá, Mundo!</h1><br><h1><a href="/products">Produtos</a></h1></body></html>';
+    res.send(html);
+});
+
 app.get("/products", (req, res) => {
     // Consulta o banco de dados para obter a lista de produtos
     db.query("SELECT * FROM produto", (err, results) => {
