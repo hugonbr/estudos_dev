@@ -97,15 +97,15 @@ if (!$possuiProdutos) {
 </main>
 
 <script>
-function confirmDelete(productId) {
-    var confirmDelete = confirm("Tem certeza de que deseja remover este produto?");
+    function confirmDelete(productId) {
+        var confirmDelete = confirm("Tem certeza de que deseja remover este produto?");
 
-    if (confirmDelete) {
-        // Se o usuário confirmar, redirecione para a página de exclusão
-        window.location.href = "deletar_produto.php?id=" + productId;
+        if (confirmDelete) {
+            // Se o usuário confirmar, redirecione para a página de exclusão
+            window.location.href = "deletar_produto.php?id=" + productId;
+        }
+        // Se o usuário cancelar, nada acontece
     }
-    // Se o usuário cancelar, nada acontece
-}
 </script>
 <?php
 require('template/footer.php');

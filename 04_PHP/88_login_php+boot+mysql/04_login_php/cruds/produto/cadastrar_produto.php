@@ -82,8 +82,8 @@ require('template/header.php');
             <div class="mt-2 mb-4">
                 <!-- <button class="btn btn-primary" type="submit"> <a href="../index.html">Create
                                             Account</a></button> -->
-                <button class="btn btn-primary" type="submit"> Salvar </button>
-                <a class="btn btn-success" href="listar_produtos.php"> Voltar </a>
+                <a class="btn btn-danger" href="listar_produtos.php"> Cancelar </a>
+                <button class="btn btn-success" type="submit"> Salvar </button>
             </div>
         </form>
     </div>
