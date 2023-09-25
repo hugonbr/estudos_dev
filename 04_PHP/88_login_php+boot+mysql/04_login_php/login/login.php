@@ -31,7 +31,7 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
         // Login falhou
         // echo "<p style='color:red;'>Nome de usuário ou senha inválidos!</p>";
         echo '<div class="text-center">';
-        echo '<span class="alert alert-danger text-center">login ou senha incorretos!</span>';
+        echo '<span class="alert alert-danger text-center">login ou senha incorretos!<a href="loginform.php" style="text-decoration: none">[X]</a></span>';
         echo '</div>';
     }
 } else {
@@ -71,18 +71,15 @@ if (isset($_POST["login"]) && isset($_POST["senha"]) && !empty($_POST["login"]) 
                                 <div class="card-body">
                                     <form action="login.php" method="POST">
                                         <div class="form-floating mb-3">
-                                            <input id="login" class="form-control" id="inputEmail" name="login"
-                                                type="text" value="hugonbr" placeholder="name@example.com" required />
+                                            <input id="login" class="form-control" id="inputEmail" name="login" type="text" value="hugonbr" placeholder="name@example.com" required />
                                             <label for="inputEmail">Usuário</label>
                                         </div>
                                         <div class="form-floating mb-3">
-                                            <input id="senha" class="form-control" id="inputPassword" name="senha"
-                                                type="password" value="000" placeholder="Password" required />
+                                            <input id="senha" class="form-control" id="inputPassword" name="senha" type="password" value="000" placeholder="Password" required />
                                             <label for="inputPassword">Senha</label>
                                         </div>
                                         <div class="form-check mb-3">
-                                            <input id="show" class="form-check-input" type="checkbox"
-                                                onclick="mostrar()" value="" />
+                                            <input id="show" class="form-check-input" type="checkbox" onclick="mostrar()" value="" />
                                             <label class="form-check-label pass-disable-text" for="show">Mostrar
                                                 Senha</label>
                                         </div>

@@ -17,7 +17,7 @@
 <body class="sb-nav-fixed">
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
         <!-- Navbar Brand-->
-        <a class="navbar-brand ps-3" href="../../../index.php">Sistema WEB</a>
+        <a class="navbar-brand ps-3" href="index.php">Sistema WEB</a>
         <!-- Sidebar Toggle-->
         <button class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0" id="sidebarToggle" href="#!">
             <i class="fas fa-bars"></i>
@@ -27,8 +27,7 @@
         <!-- Navbar-->
         <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
             <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown"
-                    aria-expanded="false"><?php echo $_SESSION["user"] . "  "; ?><i class="fas fa-user fa-fw"></i></a>
+                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><?php echo $_SESSION["user"] . "  "; ?><i class="fas fa-user fa-fw"></i></a>
                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                     <li>
                         <a class="dropdown-item" href="#">Configurações</a>
@@ -40,8 +39,7 @@
                         <hr class="dropdown-divider" />
                     </li>
                     <li>
-                        <!-- <a class="dropdown-item" href="login/loginform.php">Sair</a> -->
-                        <a class="dropdown-item" href="../../../login/loginform.php">Sair</a>
+                        <a class="dropdown-item" href="login/loginform.php">Sair</a>
                     </li>
                 </ul>
             </li>
@@ -53,7 +51,7 @@
                 <div class="sb-sidenav-menu">
                     <div class="nav">
                         <div class="sb-sidenav-menu-heading">Painéis</div>
-                        <a class="nav-link" href="../../../index.php">
+                        <a class="nav-link" href="index.php">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-tachometer-alt"></i>
                             </div>
@@ -61,8 +59,7 @@
                         </a>
                         <div class="sb-sidenav-menu-heading">Listagem</div>
 
-                        <a class="nav-link collapsed" href="../../../cruds/produto/listar_produtos.php"
-                            aria-expanded="false" aria-controls="collapseLayouts">
+                        <a class="nav-link collapsed" href="../cruds/produto/listar_produtos.php" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-cube"></i>
                             </div>
@@ -70,8 +67,7 @@
                             <div class="sb-sidenav-collapse-arrow"></div>
                         </a>
 
-                        <a class="nav-link collapsed" href="listar_funcionarios.php" aria-expanded="false"
-                            aria-controls="collapsePages">
+                        <a class="nav-link collapsed" href="../cruds/funcionario/listar_funcionarios.php" aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon">
                                 <i class="fas fa-users"></i>
                             </div>
@@ -94,7 +90,7 @@
             <main>
                 <div class="container-fluid px-4">
                     <h1 class="mt-4">
-                        <a href="../../../index.php" style="text-decoration: none">Painel Inicial</a>
+                        <a href="index.php" style="text-decoration: none">Painel Inicial</a>
                     </h1>
                     <ol class="breadcrumb mb-4">
                         <li class="breadcrumb-item active">
