@@ -51,7 +51,7 @@ require('template/header.php');
 <div class="text-center">
     <div style="margin: 2% 25% 2% 25%;">
         <div class="mt-2 mb-4">
-            <h2>Editar Produto</h2>
+            <h2>Cadastrar Produto</h2>
         </div>
         <form action="" method="POST">
             <div class="form-floating mb-3">

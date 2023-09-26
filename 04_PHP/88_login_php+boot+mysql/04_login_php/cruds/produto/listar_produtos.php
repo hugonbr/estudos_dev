@@ -32,7 +32,10 @@ $possuiProdutos = false;
 ?>
 <div class="d-flex justify-content-between">
     <!-- <a href="listar_produtos.php" style="text-decoration: none"> -->
-    <h2>Produtos: <?php echo $contprod ?></h2>
+    <h2><a href="listar_produtos.php" style="text-decoration: none; font-size: 2rem"><i style="font-size:24px"
+                class="fa">&#xf021;</i></a>
+        Produtos:
+        <?php echo $contprod ?></h2>
     <!-- </a> -->
     <a href="cadastrar_produto.php" class="btn btn-lg btn-success">Cadastrar</a>
 </div>
@@ -97,15 +100,15 @@ if (!$possuiProdutos) {
 </main>
 
 <script>
-    function confirmDelete(productId) {
-        var confirmDelete = confirm("Tem certeza de que deseja remover este produto?");
+function confirmDelete(productId) {
+    var confirmDelete = confirm("Tem certeza de que deseja remover este produto?");
 
-        if (confirmDelete) {
-            // Se o usuário confirmar, redirecione para a página de exclusão
-            window.location.href = "deletar_produto.php?id=" + productId;
-        }
-        // Se o usuário cancelar, nada acontece
+    if (confirmDelete) {
+        // Se o usuário confirmar, redirecione para a página de exclusão
+        window.location.href = "deletar_produto.php?id=" + productId;
     }
+    // Se o usuário cancelar, nada acontece
+}
 </script>
 <?php
 require('template/footer.php');
